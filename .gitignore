@@ -1,2 +1,3 @@
 # .gitignore
 google_scholar_env
+venv/
