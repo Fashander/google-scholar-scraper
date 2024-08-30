@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup
 import pandas as pd
 from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
+# from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 import sys
@@ -13,8 +13,8 @@ def init_selenium_driver():
    chrome_options.add_argument("--disable-dev-shm-usage")
 
    # Initialize the WebDriver with the path to chromedriver
-   service = Service("/usr/local/bin/chromedriver")
-   driver = webdriver.Chrome(service=service, options=chrome_options)
+#    service = Service("/usr/local/bin/chromedriver")
+   driver = webdriver.Chrome(options=chrome_options)
    return driver
 
 def fetch_search_results(driver, query, start=0):
